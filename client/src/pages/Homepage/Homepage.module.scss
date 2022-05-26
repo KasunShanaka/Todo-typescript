@@ -1,3 +1,61 @@
-.container{
-    
+@import "../../styles/variables";
+
+.container {
+    background-image: linear-gradient(to right bottom, $layerColor1, $layerColor2, $layerColor3);
+    background-color: black;
+    height: 100vh;
+    overflow: hidden;
+    display: grid;
+    align-items: center;
+    box-sizing: border-box;
+    color: $PrimaryFontColor;
+
+    .body {
+        margin: 0 auto;
+        max-width: 1000px;
+        width: 90vw;
+        // border-radius: 20px;
+
+        .searchBar {
+            margin-inline: 80px;
+        }
+        .contents {
+            overflow: auto;
+            display: grid;
+            height: 500px;
+            margin: 20px;
+            background-color: rgba(255, 255, 255, 0.235);
+            border-radius: 20px;
+
+            .items {
+                display: grid;
+                grid-template-columns: auto auto auto;
+                justify-content: center;
+
+                .card {
+                    display: grid;
+                    height: 100px;
+                    width: 200px;
+                    background-color: white;
+                    border-radius: 10px;
+                    margin: 40px;
+                    text-align: center;
+                    align-items: center;
+                    cursor: pointer;
+                    transition: .2s;
+
+                    &:hover {
+                        box-shadow: 3px 3px 5px $primaryColor;
+                    }
+
+                    .addIcon {
+                        margin-top: auto;
+                    }
+                    .addItemTxt {
+                        margin-bottom: auto;
+                    }
+                }
+            }
+        }
+    }
 }
